@@ -1,6 +1,6 @@
 [build]
-publish = "." # root folder contains index.html
-command = "" # no build step needed
+publish = "."
+command = ""
 
 [functions]
 directory = "netlify/functions"
