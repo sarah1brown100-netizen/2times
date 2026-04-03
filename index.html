@@ -3,76 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chase Login Mockup</title>
+<title>Chase Login</title>
 <style>
 body {
-font-family: Roboto, sans-serif;
-background-color: #e6f0ff; /* light blue background */
-margin: 0;
+font-family: Arial, sans-serif;
+background-color: #e6f0fa;
 display: flex;
 justify-content: center;
 align-items: center;
 height: 100vh;
+margin: 0;
 }
-.login-box {
-background: white;
-padding: 40px;
-border-radius: 10px;
-box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-text-align: center;
+.login-container {
+background: #fff;
+padding: 30px 40px;
+border-radius: 8px;
+box-shadow: 0 0 15px rgba(0,0,0,0.1);
 width: 320px;
+text-align: center;
 }
-.login-box img {
-width: 150px;
-margin-bottom: 30px;
+h1 {
+margin-bottom: 25px;
+font-weight: normal;
+color: #004990; /* Chase blue */
 }
-.login-box input {
+input[type="text"], input[type="password"] {
 width: 100%;
-padding: 12px 10px;
-margin: 10px 0;
-border-radius: 5px;
+padding: 10px 12px;
+margin: 8px 0;
 border: 1px solid #ccc;
-font-size: 16px;
+border-radius: 4px;
 }
-.login-box button {
+.options {
+text-align: left;
+margin: 15px 0;
+}
+.options label {
+display: block;
+margin-bottom: 5px;
+}
+button {
 width: 100%;
-padding: 12px;
-margin-top: 20px;
-background-color: #0070ba;
-border: none;
-border-radius: 5px;
+padding: 10px;
+background-color: #004990;
 color: white;
-font-size: 16px;
+border: none;
+border-radius: 4px;
 cursor: pointer;
 }
-.login-box button:hover {
-background-color: #005fa3;
-}
-a {
-display: block;
-margin-top: 15px;
-font-size: 14px;
-color: #0070ba;
-text-decoration: none;
-}
-a:hover {
-text-decoration: underline;
+button:hover {
+background-color: #003366;
 }
 </style>
 </head>
 <body>
 
-<div class="login-box">
-<!-- Local Chase Logo -->
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Chase_logo_2007.svg/2560px-Chase_logo_2007.svg.png" alt="Chase Logo">
+<div class="login-container">
+<h1>Chase</h1>
+<form>
+<input type="text" placeholder="Username or email" required>
+<input type="password" placeholder="Password" required>
 
-<!-- Mock login form -->
-<input type="text" placeholder="Username">
-<input type="password" placeholder="Password">
-<button>Sign In</button>
+<div class="options">
+<label><input type="checkbox" name="remember"> Remember me</label>
+<label><input type="checkbox" name="stay"> Stay logged in</label>
+</div>
 
-<a href="#">Forgot username/password?</a>
-<a href="#">Enroll</a>
+<button type="submit">Login</button>
+</form>
 </div>
 
 </body>
