@@ -6,7 +6,7 @@
 <style>
 body {
 font-family: Arial, sans-serif;
-background-color: #e6f0fa; /* much lighter blue */
+background-color: #e6f0fa;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -18,13 +18,13 @@ margin: 0;
 background: #fff;
 padding: 40px;
 border-radius: 10px;
-width: 360px;
+width: 380px;
 box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 text-align: center;
 }
 
 .logo {
-margin-bottom: 20px;
+margin-bottom: 25px;
 }
 
 input {
@@ -62,15 +62,15 @@ font-weight: bold;
 
 <div class="container">
 
-<!-- INLINE SVG LOGO (no external link needed) -->
+<!-- INLINE SVG: Chase logo (octagon + text) -->
 <div class="logo">
-<svg width="140" height="40" viewBox="0 0 200 50">
-<text x="0" y="35" font-size="32" font-family="Arial" fill="#117aca" font-weight="bold">
-chase
+<svg width="180" height="50" viewBox="0 0 200 50">
+<!-- Octagon -->
+<polygon points="10,10 40,10 50,20 50,40 40,50 10,50 0,40 0,20" fill="#117aca"/>
+<!-- Text -->
+<text x="70" y="38" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#117aca">
+CHASE
 </text>
-<!-- simple octagon icon -->
-<polygon points="150,5 180,5 195,20 195,30 180,45 150,45 135,30 135,20"
-fill="#117aca"/>
 </svg>
 </div>
 
