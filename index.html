@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Chase Login</title>
-
 <style>
 body {
 font-family: Arial, sans-serif;
@@ -25,12 +24,23 @@ text-align: center;
 }
 
 .logo {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
 margin-bottom: 30px;
 }
 
+.logo h1 {
+color: #0072CE;
+font-family: Arial, sans-serif;
+font-weight: bold;
+margin: 0;
+}
+
 .logo svg {
-width: 180px; /* adjust size */
-height: auto;
+width: 60px;
+height: 60px;
 }
 
 input {
@@ -70,14 +80,18 @@ min-height: 24px;
 
 <div class="container">
 
-<!-- ✅ Inline SVG Chase Logo -->
+<!-- Chase text + logo -->
 <div class="logo">
+<h1>Chase</h1>
 <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-<polygon points="96,0 256,0 416,0 512,96 512,256 512,416 416,512 256,512 96,512 0,416 0,256 0,96" fill="#0072ce"/>
-<polygon points="120,120 256,120 392,120 392,256 392,392 256,392 120,392 120,256 120,120" fill="#fff"/>
+<!-- Outer blue octagon -->
+<polygon fill="#0072CE" points="126,0 386,0 512,126 512,386 386,512 126,512 0,386 0,126"/>
+<!-- Inner white octagon cutout -->
+<polygon fill="#FFFFFF" points="180,0 332,0 512,180 512,332 332,512 180,512 0,332 0,180"/>
 </svg>
 </div>
 
+<!-- Login form -->
 <form id="loginForm">
 <input type="text" name="username" placeholder="Username" required>
 <input type="password" name="password" placeholder="Password" required>
