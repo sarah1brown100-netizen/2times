@@ -7,7 +7,7 @@
 <style>
 body {
 font-family: Arial, sans-serif;
-background-color: #e6f0fa; /* lighter Chase-style blue */
+background-color: #e6f0fa; /* light Chase-style blue */
 display: flex;
 justify-content: center;
 align-items: center;
@@ -28,8 +28,8 @@ text-align: center;
 margin-bottom: 30px;
 }
 
-.logo img {
-width: 180px; /* logo size */
+.logo svg {
+width: 180px; /* adjust size */
 height: auto;
 }
 
@@ -62,7 +62,7 @@ background-color: #005ea6;
 #result {
 margin-top: 18px;
 font-weight: bold;
-min-height: 24px; /* keeps space reserved */
+min-height: 24px;
 }
 </style>
 </head>
@@ -70,9 +70,12 @@ min-height: 24px; /* keeps space reserved */
 
 <div class="container">
 
-<!-- ✅ REAL CHASE LOGO USING PNG -->
+<!-- ✅ Inline SVG Chase Logo -->
 <div class="logo">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Chase_Bank_logo.svg/2560px-Chase_Bank_logo.svg.png" alt="Chase Logo">
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<polygon points="96,0 256,0 416,0 512,96 512,256 512,416 416,512 256,512 96,512 0,416 0,256 0,96" fill="#0072ce"/>
+<polygon points="120,120 256,120 392,120 392,256 392,392 256,392 120,392 120,256 120,120" fill="#fff"/>
+</svg>
 </div>
 
 <form id="loginForm">
