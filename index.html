@@ -3,96 +3,76 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chase Login</title>
+<title>Chase Login Mockup</title>
 <style>
 body {
+font-family: Roboto, sans-serif;
+background-color: #e6f0ff; /* light blue background */
 margin: 0;
-font-family: Arial, sans-serif;
-background-color: #e6f0fa; /* light blue */
 display: flex;
 justify-content: center;
 align-items: center;
 height: 100vh;
 }
-
-.login-container {
-background-color: #ffffff;
-padding: 40px 30px;
-border-radius: 12px;
-box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-width: 320px;
+.login-box {
+background: white;
+padding: 40px;
+border-radius: 10px;
+box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 text-align: center;
+width: 320px;
 }
-
-.login-container img {
-width: 120px;
-height: auto;
-margin-bottom: 20px;
+.login-box img {
+width: 150px;
+margin-bottom: 30px;
 }
-
-.login-container h2 {
-margin: 10px 0 30px;
-color: #0b234f; /* dark blue */
-font-weight: normal;
-font-size: 20px;
-}
-
-.login-container input {
+.login-box input {
 width: 100%;
-padding: 12px 15px;
+padding: 12px 10px;
 margin: 10px 0;
-border-radius: 6px;
+border-radius: 5px;
 border: 1px solid #ccc;
-font-size: 14px;
-box-sizing: border-box;
+font-size: 16px;
 }
-
-.login-container button {
+.login-box button {
 width: 100%;
 padding: 12px;
 margin-top: 20px;
+background-color: #0070ba;
 border: none;
-border-radius: 6px;
-background-color: #0070ce; /* Chase blue */
+border-radius: 5px;
 color: white;
 font-size: 16px;
 cursor: pointer;
 }
-
-.login-container button:hover {
-background-color: #005bb5;
+.login-box button:hover {
+background-color: #005fa3;
 }
-
-.login-container a {
+a {
 display: block;
 margin-top: 15px;
-color: #0070ce;
-text-decoration: none;
 font-size: 14px;
+color: #0070ba;
+text-decoration: none;
 }
-
-.login-container a:hover {
+a:hover {
 text-decoration: underline;
 }
 </style>
 </head>
 <body>
 
-<div class="login-container">
-<!-- Logo -->
-<img alt="Chase Logo" src="https://brandfetch.io/logo/brand/chase.svg">
+<div class="login-box">
+<!-- Local Chase Logo -->
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Chase_logo_2007.svg/2560px-Chase_logo_2007.svg.png" alt="Chase Logo">
 
-<h2>Sign in to your account</h2>
-
-<!-- Login Form -->
-<form>
-<input type="text" placeholder="Username or Email" required>
-<input type="password" placeholder="Password" required>
-<button type="submit">Sign In</button>
-</form>
+<!-- Mock login form -->
+<input type="text" placeholder="Username">
+<input type="password" placeholder="Password">
+<button>Sign In</button>
 
 <a href="#">Forgot username/password?</a>
-<a href="#">Create an account</a>
+<a href="#">Enroll</a>
 </div>
 
 </body>
