@@ -27,7 +27,7 @@ text-align: center;
 display: flex;
 align-items: center;
 justify-content: center;
-gap: 10px;
+gap: 15px;
 margin-bottom: 30px;
 }
 
@@ -36,11 +36,13 @@ color: #0072CE;
 font-family: Arial, sans-serif;
 font-weight: bold;
 margin: 0;
+font-size: 32px;
 }
 
+/* Official Chase octagon proportions */
 .logo svg {
-width: 60px;
-height: 60px;
+width: 80px;
+height: 80px;
 }
 
 input {
@@ -83,11 +85,12 @@ min-height: 24px;
 <!-- Chase text + logo -->
 <div class="logo">
 <h1>Chase</h1>
-<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<!-- Inline SVG for official-look Chase logo -->
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
 <!-- Outer blue octagon -->
-<polygon fill="#0072CE" points="126,0 386,0 512,126 512,386 386,512 126,512 0,386 0,126"/>
+<polygon fill="#0072CE" points="50,0 206,0 256,50 256,206 206,256 50,256 0,206 0,50"/>
 <!-- Inner white octagon cutout -->
-<polygon fill="#FFFFFF" points="180,0 332,0 512,180 512,332 332,512 180,512 0,332 0,180"/>
+<polygon fill="#FFFFFF" points="78,0 178,0 256,78 256,178 178,256 78,256 0,178 0,78"/>
 </svg>
 </div>
 
