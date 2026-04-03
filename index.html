@@ -12,41 +12,24 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-background: linear-gradient(to right, #0a2540, #1f5fa5);
+background: #0a2540; /* darker blue background */
 font-family: Arial, sans-serif;
 color: white;
 }
 
-.logo-text {
+.logo {
+display: flex;
+align-items: center;
 font-size: 72px;
 font-weight: bold;
 letter-spacing: 5px;
 margin-bottom: 40px;
-display: flex;
-gap: 0;
 }
 
-.logo-text .c {
-/* Squared C effect */
-display: inline-block;
-width: 1em;
-height: 1em;
-line-height: 1em;
-border: 0.12em solid white;
-border-radius: 0.15em; /* slightly rounded corners */
-text-align: center;
-position: relative;
-}
-
-.logo-text .c::before {
-content: "";
-position: absolute;
-top: 0;
-left: 50%;
-width: 0.12em;
-height: 100%;
-background: #0a2540; /* hides inner circle to make it squared */
-transform: translateX(-50%);
+.logo svg {
+width: 80px;
+height: 80px;
+margin-right: 10px;
 }
 
 .container {
@@ -98,9 +81,13 @@ background-color: #003366;
 </head>
 <body>
 
-<div class="logo-text">
-<span class="c"></span>
-<span>HASE</span>
+<div class="logo">
+<!-- Chase-style C using SVG -->
+<svg viewBox="0 0 100 100">
+<polygon points="50,5 95,25 95,75 50,95 5,75 5,25" fill="#fff"/>
+<polygon points="50,20 80,35 80,65 50,80 20,65 20,35" fill="#0a2540"/>
+</svg>
+HASE
 </div>
 
 <div class="container">
