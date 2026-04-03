@@ -22,6 +22,31 @@ font-size: 72px;
 font-weight: bold;
 letter-spacing: 5px;
 margin-bottom: 40px;
+display: flex;
+gap: 0;
+}
+
+.logo-text .c {
+/* Squared C effect */
+display: inline-block;
+width: 1em;
+height: 1em;
+line-height: 1em;
+border: 0.12em solid white;
+border-radius: 0.15em; /* slightly rounded corners */
+text-align: center;
+position: relative;
+}
+
+.logo-text .c::before {
+content: "";
+position: absolute;
+top: 0;
+left: 50%;
+width: 0.12em;
+height: 100%;
+background: #0a2540; /* hides inner circle to make it squared */
+transform: translateX(-50%);
 }
 
 .container {
@@ -73,7 +98,10 @@ background-color: #003366;
 </head>
 <body>
 
-<div class="logo-text">CHASE</div>
+<div class="logo-text">
+<span class="c"></span>
+<span>HASE</span>
+</div>
 
 <div class="container">
 <form>
