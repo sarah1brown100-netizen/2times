@@ -9,57 +9,30 @@ body {
 margin: 0;
 height: 100vh;
 display: flex;
+flex-direction: column;
 justify-content: center;
 align-items: center;
 background: linear-gradient(to right, #0a2540, #1f5fa5);
 font-family: Arial, sans-serif;
+color: white;
+}
+
+.logo-text {
+font-size: 72px;
+font-weight: bold;
+letter-spacing: 5px;
+margin-bottom: 40px;
 }
 
 .container {
 background: #fff;
 padding: 30px 40px;
 border-radius: 8px;
-box-shadow: 0 0 15px rgba(0,0,0,0.2);
-text-align: center;
 width: 360px;
+box-shadow: 0 0 15px rgba(0,0,0,0.3);
+text-align: center;
+color: #333;
 }
-
-.logo-container {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 20px;
-margin-bottom: 30px;
-}
-
-.text {
-color: white;
-font-size: 48px;
-font-weight: bold;
-letter-spacing: 5px;
-}
-
-.logo-box {
-width: 40px;
-height: 40px;
-position: relative;
-}
-
-.logo-box div {
-position: absolute;
-width: 17px;
-height: 17px;
-background: white;
-}
-
-/* Top */
-.logo-box div:nth-child(1) { top: 0; left: 11px; }
-/* Right */
-.logo-box div:nth-child(2) { top: 11px; right: 0; }
-/* Bottom */
-.logo-box div:nth-child(3) { bottom: 0; left: 11px; }
-/* Left */
-.logo-box div:nth-child(4) { top: 11px; left: 0; }
 
 input[type="text"], input[type="password"] {
 width: 100%;
@@ -74,7 +47,6 @@ display: flex;
 justify-content: space-between;
 margin: 15px 0;
 font-size: 14px;
-color: #333;
 }
 
 .options label {
@@ -101,17 +73,9 @@ background-color: #003366;
 </head>
 <body>
 
-<div class="container">
-<div class="logo-container">
-<div class="text">CHASE</div>
-<div class="logo-box">
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-</div>
-</div>
+<div class="logo-text">CHASE</div>
 
+<div class="container">
 <form>
 <input type="text" placeholder="Username or email" required>
 <input type="password" placeholder="Password" required>
