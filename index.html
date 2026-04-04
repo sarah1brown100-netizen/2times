@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>CHASE Login</title>
+
 <style>
 body {
 margin: 0;
@@ -17,30 +18,14 @@ font-family: Arial, Helvetica, sans-serif;
 
 /* CHASE TEXT */
 .logo {
-position: relative;
 color: white;
 font-size: 70px;
-font-weight: 900;
+font-weight: 700;
 letter-spacing: 6px;
 margin-bottom: 40px;
-font-family: "Arial Black", Arial, sans-serif;
-}
 
-/* Make the "C" more like the Chase logo */
-.logo::before {
-content: "C";
-position: absolute;
-left: 0;
-top: 0;
-color: white;
-font-size: 70px;
-font-weight: 900;
+/* THIS is what makes it look like Chase */
 font-family: "Arial Black", Arial, sans-serif;
-clip-path: polygon(0 0, 70% 0, 70% 100%, 0 100%); /* create the open part of C */
-}
-
-.logo span {
-margin-left: 10px; /* push HASE to align with modified C */
 }
 
 /* LOGIN BOX */
@@ -93,9 +78,10 @@ background-color: #003366;
 }
 </style>
 </head>
+
 <body>
 
-<div class="logo"><span>HASE</span></div>
+<div class="logo">CHASE</div>
 
 <div class="container">
 <form>
