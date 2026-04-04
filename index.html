@@ -13,10 +13,10 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 background: #0a2540;
-font-family: Arial, Helvetica, sans-serif;
+font-family: Arial, sans-serif;
 }
 
-/* LOGO AREA */
+/* LOGO */
 .logo {
 display: flex;
 align-items: center;
@@ -30,52 +30,49 @@ color: white;
 font-size: 60px;
 font-weight: 700;
 letter-spacing: 6px;
-font-family: "Arial Black", Arial, sans-serif;
 }
 
-/* SYMBOL */
+/* ICON */
 .logo-icon {
 width: 70px;
 height: 70px;
 position: relative;
 }
 
-/* 4 BLOCKS */
+/* EACH PIECE (angled like “Nevada shape”) */
 .logo-icon div {
 position: absolute;
+width: 50%;
+height: 50%;
 background: white;
 }
 
 /* TOP */
 .logo-icon div:nth-child(1) {
 top: 0;
-left: 18px;
-width: 34px;
-height: 18px;
+left: 25%;
+clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%);
 }
 
 /* RIGHT */
 .logo-icon div:nth-child(2) {
-top: 18px;
 right: 0;
-width: 18px;
-height: 34px;
+top: 25%;
+clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 75%);
 }
 
 /* BOTTOM */
 .logo-icon div:nth-child(3) {
 bottom: 0;
-left: 18px;
-width: 34px;
-height: 18px;
+left: 25%;
+clip-path: polygon(25% 0, 75% 0, 100% 100%, 0 100%);
 }
 
 /* LEFT */
 .logo-icon div:nth-child(4) {
-top: 18px;
 left: 0;
-width: 18px;
-height: 34px;
+top: 25%;
+clip-path: polygon(0 0, 100% 25%, 100% 75%, 0 100%);
 }
 
 /* LOGIN BOX */
@@ -101,12 +98,6 @@ display: flex;
 justify-content: space-between;
 font-size: 14px;
 margin-top: 10px;
-}
-
-.options label {
-display: flex;
-align-items: center;
-gap: 5px;
 }
 
 button {
