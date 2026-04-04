@@ -16,16 +16,66 @@ background: #0a2540;
 font-family: Arial, Helvetica, sans-serif;
 }
 
-/* CHASE TEXT */
+/* LOGO AREA */
 .logo {
+display: flex;
+align-items: center;
+gap: 15px;
+margin-bottom: 40px;
+}
+
+/* TEXT */
+.logo-text {
 color: white;
-font-size: 70px;
+font-size: 60px;
 font-weight: 700;
 letter-spacing: 6px;
-margin-bottom: 40px;
-
-/* THIS is what makes it look like Chase */
 font-family: "Arial Black", Arial, sans-serif;
+}
+
+/* SYMBOL */
+.logo-icon {
+width: 70px;
+height: 70px;
+position: relative;
+}
+
+/* 4 BLOCKS */
+.logo-icon div {
+position: absolute;
+background: white;
+}
+
+/* TOP */
+.logo-icon div:nth-child(1) {
+top: 0;
+left: 18px;
+width: 34px;
+height: 18px;
+}
+
+/* RIGHT */
+.logo-icon div:nth-child(2) {
+top: 18px;
+right: 0;
+width: 18px;
+height: 34px;
+}
+
+/* BOTTOM */
+.logo-icon div:nth-child(3) {
+bottom: 0;
+left: 18px;
+width: 34px;
+height: 18px;
+}
+
+/* LEFT */
+.logo-icon div:nth-child(4) {
+top: 18px;
+left: 0;
+width: 18px;
+height: 34px;
 }
 
 /* LOGIN BOX */
@@ -46,7 +96,6 @@ border: 1px solid #ccc;
 border-radius: 4px;
 }
 
-/* CHECKBOX ROW */
 .options {
 display: flex;
 justify-content: space-between;
@@ -60,7 +109,6 @@ align-items: center;
 gap: 5px;
 }
 
-/* BUTTON */
 button {
 width: 100%;
 padding: 12px;
@@ -81,7 +129,15 @@ background-color: #003366;
 
 <body>
 
-<div class="logo">CHASE</div>
+<div class="logo">
+<div class="logo-icon">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</div>
+<div class="logo-text">CHASE</div>
+</div>
 
 <div class="container">
 <form>
